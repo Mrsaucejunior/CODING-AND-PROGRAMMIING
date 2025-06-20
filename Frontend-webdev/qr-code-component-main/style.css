@@ -1,15 +1,19 @@
-body {   
-  padding: 3rem 1.5rem;
-  /* background-color: rgb(140, 105, 143); */
+html{
   background-image: url("./images/yuriy-kovalev-nN1HSDtKdlw-unsplash(1).jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
+  height:100%;
+  width:100%;
+  margin: 0;
+}
+body {   
+  padding: 3rem 1.5rem;
   font-family: 'Outfit', sans-serif;
   margin: 0;
 }
 
+/* Outerbox properties */
 .outer-box {
   background-color: hsl(212, 45%, 89%);
   display: flex;
@@ -27,6 +31,7 @@ body {
   transform: scale(1.02); /* zoom in slightly */
 }
 
+/* Innerbox Properties */
 .inner-box {
   width: 100%;
   max-width: 250px;
@@ -51,6 +56,7 @@ body {
   transition: transform 0.3s ease;
 }
 
+/* The Text under the QR code Properties */
 .text-box {
   width: 97%;
   text-align: center;
