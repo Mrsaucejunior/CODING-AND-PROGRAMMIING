@@ -6,11 +6,18 @@ html{
   height:100%;
   width:100%;
   margin: 0;
+  font-size: 16px;
 }
 body {   
   padding: 3rem 1.5rem;
   font-family: 'Outfit', sans-serif;
   margin: 0;
+}
+h1{
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #000;
+  text-align: center;
 }
 
 /* Outerbox properties */
@@ -23,7 +30,7 @@ body {
   box-shadow: -17px 17px 42px -17px rgba(0,0,0,0.49);
   padding: 1rem;
   flex-wrap: wrap;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   transition: transform 0.3s ease;
 }
 
@@ -34,11 +41,11 @@ body {
 /* Innerbox Properties */
 .inner-box {
   width: 100%;
-  max-width: 250px;
+  max-width: 15.625rem;
   background-color: #ffffff;
   color: #000000;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   padding: 1rem;
   box-sizing: border-box;
   overflow-wrap: break-word;
@@ -50,8 +57,8 @@ body {
 .inner-box img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  max-height: 200px;
+  border-radius: 0.625rem;
+  max-height: 12.5rem;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
@@ -64,18 +71,20 @@ body {
   cursor: default;
 }
 
-#text1 {
+.text1 {
   color: #000;
   font-size: 1rem; 
   font-weight: 700;
   margin: 0.5rem 0;
+  display: inline-start;
 }
 
-#text2 {
+.text2 {
   color: #333;
   font-size: 0.875rem; 
   font-weight: 400;
   margin: 0;
+  display: inline-start;
 }
 
 footer {
@@ -91,7 +100,7 @@ footer a {
 }
 
 /* Media query for small screens */
-@media (max-width: 500px) 
+@media (max-width: 31.25rem) 
 {
   .outer-box {
     flex-direction: column;
@@ -102,11 +111,22 @@ footer a {
     padding: 1rem;
   }
 
-  #text1 {
+  .text1 {
     font-size: 0.95rem;
   }
 
-  #text2 {
+  .text2 {
     font-size: 0.8rem;
+  }
+}
+
+/* Disables the zoom in effect to avoid vestibular motion triggers. */
+@media (prefers-reduced-motion: reduce) {
+  .outer-box:hover {
+    transform: none; /* Disable zoom effect */
+  }
+
+  .inner-box img {
+    transition: none; /* Disable image zoom effect */
   }
 }
