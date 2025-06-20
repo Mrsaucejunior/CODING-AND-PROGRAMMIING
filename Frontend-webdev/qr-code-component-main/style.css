@@ -1,61 +1,106 @@
-    body {   
-        padding-top: 50px;
-        padding-bottom: 50px;
-        padding-left: 25px;
-        padding-right: 25px;
-        background-color: rgb(140, 105, 143);
-        font-family: 'Outfit', sans-serif;
-    }
+body {   
+  padding: 3rem 1.5rem;
+  /* background-color: rgb(140, 105, 143); */
+  background-image: url("./images/yuriy-kovalev-nN1HSDtKdlw-unsplash(1).jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  font-family: 'Outfit', sans-serif;
+  margin: 0;
+}
+
 .outer-box {
-  
-  height: 475px;
   background-color: hsl(212, 45%, 89%);
   display: flex;
-  justify-content: center; /* horizontal center */
-  align-items: center;     /* vertical center */
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
   box-shadow: -17px 17px 42px -17px rgba(0,0,0,0.49);
+  padding: 1rem;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.outer-box:hover {
+  transform: scale(1.02); /* zoom in slightly */
 }
 
 .inner-box {
-  width: 175px;
-  height: 300px;
+  width: 100%;
+  max-width: 250px;
   background-color: #ffffff;
-  color: white;
+  color: #000000;
   text-align: center;
   border-radius: 10px;
-  padding: 9px;
-  overflow : hidden;
-  word-wrap: break-word;
-  text-overflow: ellipsis;
-  text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  line-height: 1.5;
+  box-shadow: 0px 0px 107px -42px rgba(0,0,0,0.6);
 }
+
+
 .inner-box img {
   width: 100%;
-  height: 60%;
+  height: auto;
   border-radius: 10px;
-  
+  max-height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-.text-box{
-    width:98%;
-    height: 40%;
-    text-align:center;
+.text-box {
+  width: 97%;
+  text-align: center;
+  padding-top: 0.5rem;
+  cursor: default;
 }
 
-#text1{
-    color: black;
-    font-size: 13px;
-    font-weight:700;
+#text1 {
+  color: #000;
+  font-size: 1rem; 
+  font-weight: 700;
+  margin: 0.5rem 0;
 }
 
-#text2{
-    color: black;
-    font-size: 10px;
-    font-weight:400;
+#text2 {
+  color: #333;
+  font-size: 0.875rem; 
+  font-weight: 400;
+  margin: 0;
 }
+
 footer {
   text-align: center;
   font-size: 0.75rem;
   margin-top: 2rem;
-  color: #000000;
+  color: black;
+  cursor: default;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+/* Media query for small screens */
+@media (max-width: 500px) 
+{
+  .outer-box {
+    flex-direction: column;
+  }
+
+  .inner-box {
+    max-width: 90%;
+    padding: 1rem;
+  }
+
+  #text1 {
+    font-size: 0.95rem;
+  }
+
+  #text2 {
+    font-size: 0.8rem;
+  }
 }
