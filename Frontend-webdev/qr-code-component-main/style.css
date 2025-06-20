@@ -53,6 +53,9 @@
     font-size: 10px;
     font-weight:400;
 }
-footer{
-    display: block;
+footer {
+  text-align: center;
+  font-size: 0.75rem;
+  margin-top: 2rem;
+  color: #000000;
 }
