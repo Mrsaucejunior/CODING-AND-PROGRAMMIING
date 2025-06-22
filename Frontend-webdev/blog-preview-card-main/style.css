@@ -1,0 +1,121 @@
+body {
+    font-family: 'Figtree', sans-serif;
+    background-color: hsl(47, 88%, 63%);
+    margin: 0;
+    padding: 0; 
+    color: #000;
+}
+
+header h1 {
+    color: white;
+    text-align: center;
+    padding: 1.25rem 0; 
+    font-weight: 800;
+}
+
+main h2 {
+    font-size: 1.125rem;    
+    font-weight: 800;
+}
+
+.card {
+    width: 15.625rem;        
+    height: auto;
+    background-color: white;
+    border-radius: 1.25rem;  
+    box-shadow: 6px 6px 0px 0px rgba(0,0,0,1); 
+    overflow: hidden;
+    margin: 1.25rem auto;    
+    border: 0.0625rem solid black; 
+    padding: 1.25rem;        
+}
+
+.card img {
+    width: 100%;
+    height: 25%;
+    border-radius: 0.625rem;   
+    margin-bottom: 0.625rem;   
+}
+
+.p1 {
+    background-color: hsl(47, 88%, 63%);
+    width: 4.6875rem;       
+    height: 1.5625rem;     
+    border-radius: 0.3125rem; 
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-weight: 800;
+    font-size: 0.8125rem;   
+}
+
+.p2 {
+    font-weight: 500;
+    font-size: 0.8125rem;   
+}
+
+
+
+.p3 {
+    font-weight: 500;
+    font-size: 0.75rem;    
+    color: hsl(0, 0%, 42%);
+}
+
+.p4 {
+    display: flex;
+    align-items: center;
+    gap: 0.8125rem;         
+    margin: 0;
+    width: 50%;
+}
+
+.p4 img {
+    width: 1.875rem;        
+    height: auto;
+    border-radius: 50%;
+}
+
+.p4 p {
+    font-weight: 800;
+    font-size: 0.8125rem;   
+    margin-top: 0;
+}
+
+.attribution {
+    font-size: 0.6875rem;   
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none; 
+}
+
+/* Responsive media query */
+@media (min-width: 768px) {
+    .card {
+        max-width: 400px;
+        padding: 2rem;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    main h2 {
+        font-size: 1.5rem;
+    }
+
+    .p3 {
+        font-size: 0.875rem;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
