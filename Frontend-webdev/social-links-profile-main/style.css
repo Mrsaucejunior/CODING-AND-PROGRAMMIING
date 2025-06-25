@@ -74,7 +74,7 @@ h1 {
 
 .link:hover,
 .link:focus {
-    background-color: hsl(228, 45%, 35%);
+    background-color: hsl(75, 94%, 57%);
     cursor: pointer;
     transform: scale(1.05);
 }
@@ -85,7 +85,7 @@ h1 {
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: hsl(75, 94%, 57%);
     text-decoration: none;
 }
 
