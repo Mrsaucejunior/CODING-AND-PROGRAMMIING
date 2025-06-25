@@ -5,12 +5,15 @@ html, body {
 }
 
 body {
-    background-color: hsl(0, 0%, 8%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
+  min-height: 100vh;
+  background-color: hsl(0, 0%, 8%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -88,4 +91,32 @@ h1 {
 
 .attribution a:hover {
     text-decoration: underline;
+}
+
+/* Responsive layout tweaks for larger screens */
+@media (min-width: 768px) {
+  .card {
+    padding: 2rem;
+  }
+
+  .link {
+    font-size: 1.125rem; /* 18px */
+  }
+
+  .location {
+    font-size: 1rem;       
+  }
+  .about {
+    font-size: 0.8125rem;
+  }
+
+  .attribution {
+    font-size: 0.75rem;
+  }
+}
+
+/* Ensure body fills the entire viewport */
+html, body {
+  height: 100%;
+  width: 100%;
 }
