@@ -1,4 +1,4 @@
-html,body {
+html, body {
     width: 100%;
     margin: 0;
 }
@@ -14,62 +14,68 @@ body {
     padding: 1rem;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+
 hr {
-    border: none;              /* remove default border */
-    height: 1px;               /* thickness of the line */
-    background-color: #ccc;    /* color of the line */
-    width: 100%;               /* width of the line */
-    margin-top: 15px;
+    border: none;
+    height: 0.0625rem; /* 1px */
+    background-color: #ccc;
+    width: 100%;
+    margin-top: 0.9375rem; /* 15px */
 }
 
 .card {
-  width: 31.25rem;                    /* 450px */
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 0.9375rem;        /* 15px */
-  display: flex;
-  flex-direction: column;
-  color: hsl(30, 10%, 34%);
-  padding: 1.5625rem;              /* 25px */
+    width: 28.125rem;          /* 450px */
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0.9375rem;  /* 15px */
+    display: flex;
+    flex-direction: column;
+    color: hsl(30, 10%, 34%);
+    padding: 1.5625rem;        /* 25px */
 }
 
 img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 0.625rem;   /* 10px */
 }
 
 h1 {
-    font-family: 'Young serif';
+    font-family: 'Young Serif';
     font-weight: 400;
-    font-size: 30px;
+    font-size: 1.875rem;       /* 30px */
     margin-bottom: 0.8rem;
     color: hsl(24, 5%, 18%);
 }
 
 .about {
-    font-size: 12px;
+    font-size: 0.7rem;        /* 11.2px */
 }
 
 .preparation {
     background-color: hsl(330, 100%, 98%);
-    padding-left: 1.25rem;
-    border-radius: 0.75rem;
+    padding-left: 1.25rem;     /* 20px */
+    border-radius: 0.75rem;    /* 12px */
     margin-top: 1rem;
-    font-size: 13px;
-    padding-bottom: 10px;
+    font-size: 0.8125rem;      /* 13px */
+    padding-bottom: 0.625rem;  /* 10px */
 }
 
 .preparation h4 {
     font-family: 'Outfit';
     font-weight: 600;
-    font-size: 18px;
+    font-size: 1.125rem;       /* 18px */
     margin-bottom: 0;
-    margin-top: 15px;
+    margin-top: 0.9375rem;     /* 15px */
     color: hsl(332, 51%, 32%);
 }
 
 .preparation ul li::marker {
-  color: hsl(332, 51%, 32%); /* set bullet color */
-  font-weight: bold;       
+    color: hsl(332, 51%, 32%);
+    font-weight: bold;
 }
 
 .preparation ul {
@@ -79,13 +85,12 @@ h1 {
 
 .preparation ul li {
     text-align: left;
-    margin-bottom: 14px;
-    text-indent: 14px;
+    margin-bottom: 0.875rem;   /* 14px */
+    text-indent: 0.875rem;     /* 14px */
 }
 
 .ingredients {
-    font-size: 13px;
-    
+    font-size: 0.7rem;      /* 11.2px */
 }
 
 ul li::marker, ol li::marker, table td b {
@@ -93,28 +98,27 @@ ul li::marker, ol li::marker, table td b {
     font-weight: bold;
 }
 
-.ingredients h2{
+.ingredients h2 {
     font-family: 'Young Serif';
     font-weight: 400;
-    font-size: 23px;
+    font-size: 1.4375rem;      /* 23px */
     color: hsl(14, 45%, 36%);
     margin-bottom: 0;
 }
 
 .ingredients ul {
-    padding-left: 20px;
-}
- 
-.ingredients ul li {
-    margin-bottom: 10px;
-    text-indent: 14px;
+    padding-left: 1.25rem;     /* 20px */
 }
 
+.ingredients ul li {
+    margin-bottom: 0.625rem;   /* 10px */
+    text-indent: 0.875rem;     /* 14px */
+}
 
 .instructions h2 {
     font-family: 'Young Serif';
     font-weight: 400;
-    font-size: 23px;
+    font-size: 1.4375rem;      /* 23px */
     color: hsl(14, 45%, 36%);
     margin-bottom: 0;
 }
@@ -122,27 +126,28 @@ ul li::marker, ol li::marker, table td b {
 .instructions ol {
     font-family: 'Outfit';
     font-weight: 400;
-    padding-left: 20px;
-    font-size: 12px;
+    padding-left: 1.25rem;     /* 20px */
+    font-size: 0.7rem;        /* 11.2px */
+    line-height: 1.5;
 }
 
 .instructions ol li {
-    margin-bottom: 10px;
-    padding-left: 10px;   
+    margin-bottom: 0.625rem;   /* 10px */
+    padding-left: 0.625rem;    /* 10px */
 }
 
 .nutrition {
-    font-size: 13px;
+    font-size: 0.7rem;      /* 11.2px */
     margin-top: 1rem;
 }
 
 .nutrition h2 {
     font-family: 'Young Serif';
     font-weight: 400;
-    font-size: 23px;
+    font-size: 1.4375rem;      /* 23px */
+    margin-top: 0;
     margin-bottom: 0;
     color: hsl(14, 45%, 36%);
-    margin-top: 0;
 }
 
 table {
@@ -151,25 +156,43 @@ table {
     margin: 1rem 0;
     font-family: 'Outfit', sans-serif;
     font-weight: 400;
+    font-size: 0.8125rem;      /* 13px */
 }
 
 thead td, tbody td {
-    padding: 0.75rem;
-    border-bottom: 1px solid #ccc;
+    padding: 0.75rem;          /* 12px */
+    border-bottom: 0.0625rem solid #ccc; /* 1px */
     text-align: left;
 }
 
 tfoot td {
-    padding: 0.75rem;
+    padding: 0.75rem;          /* 12px */
     padding-bottom: 0;
     border: none;
     text-align: left;
 }
 
-
 .attribution { 
-    font-size: 11px; 
-    text-align: center; }
+    font-size: 0.6875rem;      /* 11px */
+    text-align: center;
+}
+
 .attribution a { 
     color: hsl(228, 45%, 44%);
- }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  img {
+    border-radius: 0.5rem;
+  }
+
+  .preparation, .ingredients, .instructions, .nutrition {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
