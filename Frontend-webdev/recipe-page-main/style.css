@@ -179,7 +179,7 @@ tfoot td {
     color: hsl(228, 45%, 44%);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 37.5px) {
   .card {
     width: 95%;
     padding: 1rem;
