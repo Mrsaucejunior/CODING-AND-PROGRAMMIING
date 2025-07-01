@@ -75,6 +75,7 @@ h1 {
 .link:hover,
 .link:focus {
     background-color: hsl(75, 94%, 57%);
+    color: black;
     cursor: pointer;
     transform: scale(1.05);
 }
@@ -96,11 +97,11 @@ h1 {
 /* Responsive layout tweaks for larger screens */
 @media (min-width: 768px) {
   .card {
-    padding: 2rem;
+    padding: 1.25rem;
   }
 
   .link {
-    font-size: 1.125rem; /* 18px */
+    font-size: 1.125rem;
   }
 
   .location {
