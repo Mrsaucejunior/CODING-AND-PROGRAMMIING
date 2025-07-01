@@ -18,8 +18,6 @@ body {
   box-sizing: border-box;
 }
 
-
-
 hr {
     border: none;
     height: 0.0625rem; /* 1px */
@@ -46,7 +44,7 @@ img {
 h1 {
     font-family: 'Young Serif';
     font-weight: 400;
-    font-size: 1.875rem;       /* 30px */
+    font-size: 1.5625rem;       /* 25px */
     margin-bottom: 0.8rem;
     color: hsl(24, 5%, 18%);
 }
@@ -112,7 +110,7 @@ ul li::marker, ol li::marker, table td b {
 
 .ingredients ul li {
     margin-bottom: 0.625rem;   /* 10px */
-    text-indent: 0.875rem;     /* 14px */
+    padding-left: 0.625rem;     /* 10px */
 }
 
 .instructions h2 {
