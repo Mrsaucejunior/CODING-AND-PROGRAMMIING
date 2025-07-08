@@ -1,0 +1,133 @@
+html {
+    box-sizing: border-box;
+    max-width: 70ch;
+    margin: 0 auto;
+    font-family: 'Montserrat', 'Fraunces', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 7px;
+    padding: 0;
+    width: 575px;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    cursor: default;
+}   
+
+.product-card img {
+    height: 100%;
+    width: 275px;
+}
+
+.product-details {
+    padding: 20px;
+    width: 300px;
+}
+
+.product-details .category {
+    font-family: 'Montserrat', serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-top: 0;
+}
+
+.product-details h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 34px;
+    margin: 0;
+    line-height: 1;
+    color: hsl(212, 21%, 14%);
+}
+
+.product-details .description {
+    font-family: 'Montserrat', serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: hsl(228, 12%, 48%);
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+.product-details .prices {
+    font-family: 'Fraunces', serif;
+    margin-top: 15px;
+    display: flex;                 /* puts both prices side by side */
+    justify-content: left;       /* centers them horizontally */
+    align-items: center;    
+}
+
+.product-details .prices .price-current {
+    font-weight: 700;
+    font-size: 30px;
+    color: hsl(158, 36%, 37%);
+}
+
+.product-details .prices .price-old {
+    font-weight: 500;
+    font-size: 15px;
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+    margin-left: 10px;
+}
+
+.product-details button {
+    width: 100%;
+    height: 45px;
+    margin-top: 10px;
+    color: white;
+    font-family: 'Montserrat', serif;
+    font-weight: 700;
+    background-color: hsl(158, 36%, 37%);
+    border: none;
+    border-radius: 7px;
+    transition: background-color 0.3s ease;
+}
+
+.product-details button img {
+    width: 6%;
+    height: 13px;
+}
+
+.product-card:hover {
+box-shadow: 0px 0px 11px 0px rgba(170, 170, 170, 0.4);
+}
+
+.product-details button:hover {
+    background-color: hsl(158, 50%, 30%);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+.attribution a:link {
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}
