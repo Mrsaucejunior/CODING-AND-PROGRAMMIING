@@ -14,14 +14,20 @@
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 </head>
 <body>
-  <main>
+  <main class="container" id="container">
     <section class="img-section">
-      <img src="./assets/images/illustration-sign-up-mobile.svg" alt="illustration">
+      <picture>
+        <source srcset="./assets/images/illustration-sign-up-tablet.svg" media="(min-width: 768px)">
+        <source srcset="./assets/images/illustration-sign-up-desktop.svg" media="(min-width: 1028px)">
+        <img src="./assets/images/illustration-sign-up-mobile.svg" alt="illustration">
+      </picture>
     </section>
 
     <section class="details">
       <h1>Stay updated!</h1>
-      <p class="text">Join 60,000+ product managers receiving monthly updates on:</p>
+
+      <p class="text">Join 60,000+ product managers receiving monthly updates   on: 
+      </p>
       <ul class="custom-list">
         <li><img src="./assets/images/icon-list.svg" alt="icon list">Product discovery and building what matters</li>
         <li><img src="./assets/images/icon-list.svg" alt="icon list">Measuring to ensure updates are a success</li>
@@ -38,7 +44,22 @@
         <input type="email" id="email" class="email" name="email" placeholder="email@company.com">
 
         <button type="submit" class="btn-submit" id="btn-submit">Subscribe to monthly newsletter</button>
-    </form>
+      </form>
+
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <div class="popup-image">
+            <img src="./assets/images/icon-success.svg" alt="Pop Up Image">
+          </div>
+          <h2>Thanks for subscribing!</h2>
+          <p>
+              A confirmation email has been sent to <span id="popup-email">ash@loremcompany.com</span>. Please open it and click the button inside to confirm your subscription.
+          </p>
+        </div>
+        
+        <button id="closePopup">Dismiss message</button>
+      </div>
+
     </section>
 
 
@@ -47,7 +68,7 @@
   <footer>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">JubyDev</a>.
     </div>
     </footer>
 </body>
