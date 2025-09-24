@@ -1,0 +1,269 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Space Mono', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Space Mono', sans-serif;
+    background-color: hsl(185, 41%, 84%);
+    display: flex;
+    flex-direction: column;
+    transition: all .1 ease;
+}
+
+header {
+    margin: 0 auto;
+    padding: 3rem;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1rem;
+    margin-bottom: .3rem;
+    opacity: .5;
+}
+
+form {
+    width: 100%;
+    max-width: 420px;
+    background-color: hsl(0, 100%, 100%);
+    border-radius: 1rem 1rem 0 0;
+    padding: 2rem 1.5rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+button {
+    width: 100%;
+    border-radius: .4rem;
+}
+
+input {
+    width: 100%;
+    font-size: 24px;
+    background-color:  hsl(189, 47%, 97%);
+    border: none;
+    text-align: right;
+    border-radius: .4rem;
+    padding: .3rem;
+    color: hsl(183, 100%, 15%);
+}
+
+.bill,
+.num-of-people {
+    background-position: 10px center; 
+    background-repeat: no-repeat;
+    padding-left: 2.5rem;
+}
+
+.bill {
+    background-image: url("./images/icon-dollar.svg");
+}
+
+.bill-section, .tip-section, .num-of-people {
+    margin-bottom: 1rem;
+}
+
+.btn-inputs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.select-btn {
+    font-size: 1.3rem;
+    border: none;
+    padding: .5rem;
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(0, 100%, 100%);
+}
+
+.custom-tip {
+    background-color:  hsl(189, 47%, 97%);
+    color: hsl(183, 100%, 15%);
+}
+
+.num-of-people-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .3rem;
+}
+
+.num-of-people-header h2,
+.num-of-people-header p {
+    margin: 0;
+}
+
+.error-msg {
+    visibility: hidden;
+}
+
+
+.active-error-msg {
+    font-size: .8rem;
+    color: red;
+    opacity: .6;
+    visibility: visible;
+}
+
+.num-of-people {
+    background-image: url("./images/icon-person.svg");
+}
+
+.tip-cal-section {
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(0, 100%, 100%);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    overflow: hidden;
+}
+
+.tip-eval {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tip-eval p {
+    margin: 1rem 0;
+}
+
+.per-person {
+    font-size: .8rem;
+    opacity: .7;
+}
+
+.amount {
+    font-size: 2rem;
+    color:  hsl(172, 67%, 45%);
+}
+
+.reset-btn {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    font-size: 1rem;
+    padding: .5rem;
+    text-transform: uppercase;
+    border: none;
+    transition: all .3s ease;
+}
+
+.custom-tip, .num-of-people {
+    outline: none;
+}
+
+.active-input:hover,
+.active-input:focus {
+    outline: 2px solid hsl(172, 67%, 45%); 
+    cursor: pointer;  
+}
+
+button:hover, .active-btn {
+    background-color: hsla(172, 67%, 45%, 0.5);
+    color: hsl(183, 100%, 15%);
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: all 0.2s ease;
+}
+
+.custom-tip:hover {
+    background-color:  hsl(189, 47%, 97%);
+}
+
+.reset-btn:hover {
+    background-color:  hsl(172, 67%, 70%);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.active-error-input {
+    outline: 2px solid hsla(0, 100%, 50%, 0.5) !important; 
+}
+
+footer {
+    display: none;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* breakpoints */
+
+@media (min-height: 855px ) {
+    form {
+        border-radius: 1rem;
+    }
+
+    footer {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        transform: scale(1.05);
+    }
+
+    hea
+
+    form {
+        border-radius: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    footer {
+        display: block;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        height: 100vh;
+        place-content: center;
+    }
+    h2 {
+        font-size: .9rem;
+    }
+
+    form {
+        display: flex;
+        max-width: 740px;
+    }
+
+    .bill-tip-section, .tip-cal-section {
+        width: 100%;
+    }
+
+    .bill-tip-section {
+        padding-right: 2rem;
+        padding-left: .5rem;
+    }
+
+    .btn-inputs {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .tip-cal-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .tip-eval {
+        font-size: .8em;
+    }
+
+    .amount {
+        font-size: 3em;
+    }
+}
