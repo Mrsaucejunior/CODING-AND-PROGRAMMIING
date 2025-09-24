@@ -60,11 +60,13 @@ tips.forEach(tip => {
     }
 
     if (tip.tagName === "INPUT") {
-            tip.addEventListener("input", () => {
+        tip.addEventListener("click", () => {
             removeActiveBtn();
-            let number = parseInt(tip.value);
-            tipAmount = (number || 0) / 100;
-            calculate();
+            tip.addEventListener("input", () => {
+                let number = parseInt(tip.value);
+                tipAmount = (number || 0) / 100;
+                calculate();
+            });
         });
     }
 });
