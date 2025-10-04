@@ -1,187 +1,225 @@
+/* Global Reset & Base Styles */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 body {
-    font-family: 'Overpass', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: hsl(216, 12%, 8%);
-    color: hsl(0, 100%, 100%);
-    display: flex;
-    flex-direction: column;
-    place-content: center;
-    min-height: 100vh;
+  font-family: 'Overpass', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: hsl(216, 12%, 8%);
+  color: hsl(0, 100%, 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
 }
 
-main {
-    display: flex;
-    place-items: center;
-    min-height: 90vh;
-    margin-bottom: 2rem;
-}
-
+/* Typography */
 h1 {
-    font-size: 1.3rem;
-    font-weight: 700;
-
+  font-size: 1.3rem;
+  font-weight: 700;
 }
 
-button {
-    margin: 0;
-    padding: 0;
-    border: none;
+p {
+  line-height: 1.5;
 }
 
+.card-text,
+.thank-you-message {
+  color: hsl(217, 12%, 63%);
+  font-size: 0.9rem;
+}
+
+/* Layout */
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  margin-bottom: 2rem;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Card Sections */
 .card-section {
-    background-color: hsl(213, 19%, 18%);
-    margin: 0 auto;
-    padding: 1.5rem;
-    width: 90%;
-    max-width: 337px;
-    overflow: hidden;
-    border-radius: 1rem;
-    font-weight: 400;
-    transition: all .3s ease;
+  background-color: hsl(213, 19%, 18%);
+  margin: 0 auto;
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 337px;
+  border-radius: 1rem;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  overflow: hidden;
 }
 
+/* Card Icon*/
 .card-icon {
-    background-color: hsl(213, 20%, 23%);
-    width: 25px;
-    text-align: center;
-    padding: .3rem;
-    border-radius: 50%;
+  background-color: hsl(213, 20%, 23%);
+  width: 25px;
+  text-align: center;
+  padding: 0.3rem;
+  border-radius: 50%;
 }
 
 .card-icon img {
-    width: 11px;
-    height: 11px;
+  width: 11px;
+  height: 11px;
 }
 
-.card-text {
-    font-size: .85rem;
-    line-height: 1.5;
-    color: hsl(217, 12%, 63%);
-}
-
+/* Rating Buttons */
 .rates {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .rating-btn {
-    width: 15%;
-    font-weight: 700;
-    padding: 1rem;
-    border-radius: 50%;
-    color: hsl(0, 100%, 100%);
-    background-color:  hsl(213, 20%, 23%);
+  width: 15%;
+  padding: 1rem;
+  border-radius: 50%;
+  color: hsl(0, 100%, 100%);
+  background-color: hsl(213, 20%, 23%);
 }
 
-.rating-btn:hover {
-    background-color: hsl(25, 97%, 53%);
-}
-
-.rating-btn:hover {
-    color: hsl(216, 12%, 8%);
+/* Hover and focus states for accessibility */
+.rating-btn:hover,
+.rating-btn:focus-visible {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(216, 12%, 8%);
+  outline: none;
 }
 
 .active-rating-btn {
-    color: hsl(216, 12%, 8%) !important;
-    background-color: hsl(0, 100%, 100%) !important;
+  background-color: hsl(0, 100%, 100%) !important;
+  color: hsl(216, 12%, 8%) !important;
 }
 
-.rating-btn,
-.active-submit-btn {
-    cursor: pointer;
-}
-
+/* Submit Button */
 .submit-btn {
-    width: 100%;
-    font-weight: 700;
-    padding: .7rem;
-    border-radius: 25rem;
-    text-transform: uppercase;
-    color: hsl(216, 12%, 8%);
-    background-color: hsla(25, 97%, 53%, 0.5);
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 25rem;
+  text-transform: uppercase;
+  color: hsl(216, 12%, 8%);
+  background-color: hsla(25, 97%, 53%, 0.5);
 }
 
 .active-submit-btn {
-    background-color: hsl(25, 97%, 53%);
-    animation: pop .8s ease-out infinite alternate;
+  background-color: hsl(25, 97%, 53%);
+  animation: pop 0.8s ease-out infinite alternate;
 }
 
+/* Accessible hover/focus states */
+.submit-btn:hover,
+.submit-btn:focus-visible {
+  background-color: hsl(0, 100%, 100%);
+  color: hsl(216, 12%, 8%);
+  outline: none;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .active-submit-btn {
+    animation: none;
+  }
+}
+
+/* Keyframes */
 @keyframes pop {
-    from { transform: scale(1); }
-    to { transform: scale(1.05); }
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
 }
 
-.active-submit-btn:hover {
-    background-color: hsl(0, 100%, 100%);
-}
-
+/* Thank You Section */
 .thank-you-section {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .thank-you-section h2 {
-    margin-top: 2rem;
-}
-
-.thank-you-section p {
-    margin: 0;
+  margin-top: 2rem;
+  margin-bottom: 0;
 }
 
 .selection {
-    margin-top: 1.5rem;
-    background-color: hsl(213, 20%, 23%);
-    color: hsl(25, 97%, 53%);
-    padding: .5rem 1rem;
-    border-radius: 50px;
-    font-size: .8rem;
-    font-weight: 700;
+  margin-top: 1.5rem;
+  background-color: hsl(213, 20%, 23%);
+  color: hsl(25, 97%, 53%);
+  padding: .5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
 }
 
-.thank-you-message {
-    color: hsl(217, 12%, 63%);
-    line-height: 1.5;
-    font-size: .9rem;
+.selection p {
+    margin: 0;
 }
 
-
-
-.attribution {     
-    font-size: .9rem; 
-    text-align: center; 
+/* Attribution */
+.attribution {
+  font-size: 0.9rem;
+  text-align: center;
 }
 
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
 }
 
+.attribution a:hover,
+.attribution a:focus-visible {
+  text-decoration: underline;
+}
+
+/* Screen Reader Only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+}
+
+/* Responsive Adjustments */
 @media (min-width: 768px) {
-    .card-section {
-        transform: scale(1.2);
-    }
+  .card-section {
+    transform: scale(1.2);
+  }
 
-    .attribution {     
-        font-size: 1.5rem;
-    }
+  .attribution {
+    font-size: 1.5rem;
+  }
 }
-
-/* @media (min-width: 1024px) {
-    .card-section {
-        transform: scale();
-    }
-} */
