@@ -1,0 +1,181 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: hsl(216, 12%, 8%);
+    color: hsl(0, 100%, 100%);
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    place-items: center;
+    min-height: 90vh;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 1.3rem;
+    font-weight: 700;
+
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.card-section {
+    background-color: hsl(213, 19%, 18%);
+    margin: 0 auto;
+    padding: 1.5rem;
+    width: 90%;
+    max-width: 337px;
+    overflow: hidden;
+    border-radius: 1rem;
+    font-weight: 400;
+    transition: all .3s ease;
+}
+
+.card-icon {
+    background-color: hsl(213, 20%, 23%);
+    width: 25px;
+    text-align: center;
+    padding: .3rem;
+    border-radius: 50%;
+}
+
+.card-icon img {
+    width: 11px;
+    height: 11px;
+}
+
+.card-text {
+    font-size: .85rem;
+    line-height: 1.5;
+    color: hsl(217, 12%, 63%);
+}
+
+.rates {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.rating-btn {
+    width: 15%;
+    font-weight: 700;
+    padding: 1rem;
+    border-radius: 50%;
+    color: hsl(0, 100%, 100%);
+    background-color:  hsl(213, 20%, 23%);
+}
+
+.rating-btn:hover {
+    background-color: hsl(25, 97%, 53%);
+}
+
+.rating-btn:hover {
+    color: hsl(216, 12%, 8%);
+}
+
+.active-rating-btn {
+    color: hsl(216, 12%, 8%) !important;
+    background-color: hsl(0, 100%, 100%) !important;
+}
+
+.rating-btn,
+.active-submit-btn {
+    cursor: pointer;
+}
+
+.submit-btn {
+    width: 100%;
+    font-weight: 700;
+    padding: .7rem;
+    border-radius: 25rem;
+    text-transform: uppercase;
+    color: hsl(216, 12%, 8%);
+    background-color: hsla(25, 97%, 53%, 0.5);
+}
+
+.active-submit-btn {
+    background-color: hsl(25, 97%, 53%);
+    animation: pop .8s ease-out infinite alternate;
+}
+
+@keyframes pop {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+
+.active-submit-btn:hover {
+    background-color: hsl(0, 100%, 100%);
+}
+
+.thank-you-section {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.thank-you-section h2 {
+    margin-top: 2rem;
+}
+
+.thank-you-section p {
+    margin: 0;
+}
+
+.selection {
+    margin-top: 1.5rem;
+    background-color: hsl(213, 20%, 23%);
+    color: hsl(25, 97%, 53%);
+    padding: .5rem 1rem;
+    border-radius: 50px;
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.thank-you-message {
+    color: hsl(217, 12%, 63%);
+    line-height: 1.5;
+    font-size: .9rem;
+}
+
+
+
+.attribution {     
+    font-size: .9rem; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 768px) {
+    .card-section {
+        transform: scale(1.5);
+    }
+
+    .attribution {     
+        font-size: 1.5rem;
+    }
+}
