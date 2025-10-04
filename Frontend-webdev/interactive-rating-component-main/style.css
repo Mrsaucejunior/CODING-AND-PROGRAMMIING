@@ -172,10 +172,16 @@ button {
 
 @media (min-width: 768px) {
     .card-section {
-        transform: scale(1.5);
+        transform: scale(1.2);
     }
 
     .attribution {     
         font-size: 1.5rem;
     }
 }
+
+/* @media (min-width: 1024px) {
+    .card-section {
+        transform: scale();
+    }
+} */
