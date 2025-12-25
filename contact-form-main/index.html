@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./main.js" defer></script>
+  
+  <title>Frontend Mentor | Contact form</title>
+</head>
+<body>
+
+  <main>
+    <form>
+      <h1>Contact Us</h1>
+
+      <label for="firstName">First Name <span class="required">*</span></label>
+      <br>
+      <input type="text" name="firstName" id="firstName">
+      <br>
+      <label for="lastName">Last Name <span class="required">*</span></label>
+      <br>
+      <input type="text" name="lastName" id="lastName">
+      <br>
+      <label for="email">Email Address <span class="required">*</span></label>
+      <br>
+      <input type="text" name="email" id="email">
+      <br>
+      <fieldset>
+        <legend>Query Type <span class="required">*</span></legend>
+          
+          <label class="query-input" for="generalEnquiry">
+            <input type="radio" name="query" id="generalEnquiry">
+            <span class="custom-radio"></span>
+            General Enquiry
+          </label>
+        
+        <br>
+
+          <label class="query-input" for="supportRequest">
+            <input type="radio" class="custom-radio" name="query" id="supportRequest">
+            <span class="custom-radio"></span>
+            Support Request
+          </label>
+      </fieldset>
+
+      <label for="message">Message <span class="required">*</span></label>
+      
+      <br>
+
+      <input type="text" name="message" id="message"></input>
+
+      <br>
+      <div class="consent-box"> 
+        <input type="checkbox" name="consent" id="consent">
+        <label for="consent">I consent to being contacted by the team <span class="required">*</span></label>
+      </div>
+      <button id="submitBtn">Submit</button>
+    </form>
+  </main>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
+
+</body>
+</html>
